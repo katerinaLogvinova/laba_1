@@ -1,0 +1,9 @@
+Testsuite: ua.nure.kn.logvinova.usermanagment.UserTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,025 sec
+
+Testcase: simpeAgeTest took 0,002 sec
+Testcase: testGetFullName took 0 sec
+Testcase: birthdayWillBeThisMonth took 0 sec
+Testcase: birthdayAlreadyWasAlready took 0 sec
+Testcase: birthdayTheSameMonth took 0 sec
+Testcase: birthdayWillBe took 0 sec

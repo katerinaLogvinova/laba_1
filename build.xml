@@ -1,0 +1,40 @@
+<project name="usermanagment" basedir="." default="test">
+    <property name="built-dir" value="${basedir}/out"/>
+    <property name="classes-dir" value="${built-dir}/classes"/>
+    <property name="main-dir" value="${basedir}/src/main/java"/>
+    <property name="test-java-dir" value="${basedir}/src/test/java"/>
+
+    <target name="clean">
+        <delete dir="${built-dir}" failonerror="no"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${built-dir}"/>
+        <mkdir dir="${classes-dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${main-dir}" destdir="${built-dir}" includeantruntime="false" />
+    </target>
+
+    <target name="test-compile" depends="init">
+        <javac srcdir="${test-java-dir}" destdir="${built-dir}" includeantruntime="false">
+            <classpath>
+                <path id="org.junit" location="C:/Users/Kate/UserManagmentKate/lib/junit-4.12.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="test" depends="compile, test-compile">
+        <junit>
+            <classpath>
+                <pathelement location="${built-dir}"/>
+                <fileset dir="./lib">
+                    <include name="**/junit-4.12.jar"/>
+                </fileset>
+            </classpath>
+            <test name="ua.nure.kn.logvinova.usermanagment.UserTest"/>
+            <formatter type="plain"/>
+        </junit>
+    </target>
+</project>
