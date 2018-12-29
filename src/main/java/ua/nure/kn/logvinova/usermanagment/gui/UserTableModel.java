@@ -52,4 +52,11 @@ public class UserTableModel extends AbstractTableModel {
     public String getColumnName(int i) {
         return COLUMN_NAMES[i];
     }
+
+    public void addUsers(Collection<User> users) {
+        this.users.addAll(users);
+    }
+    public void clearUsers() {
+        this.users = new ArrayList<>();
+    }
 }

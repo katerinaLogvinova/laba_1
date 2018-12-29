@@ -12,7 +12,7 @@ public interface UserDAO {
 
     User find(Long id) throws DatabaseException;
     Collection findAll() throws DatabaseException;
-
+    Collection find(String firstName, String lastName) throws DatabaseException;
     public ConnectionFactory getConnectionFactory();
 
     public void setConnectionFactory(ConnectionFactory connectionFactory);
