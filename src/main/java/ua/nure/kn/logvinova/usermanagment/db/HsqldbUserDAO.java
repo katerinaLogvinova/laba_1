@@ -71,7 +71,7 @@ class HsqldbUserDAO implements UserDAO {
 
 
     @Override
-    public void delete(Long id) throws DatabaseException {
+    public void delete(User id) throws DatabaseException {
         try {
             Connection connection = connectionFactory.createConnection();
             PreparedStatement statement = connection.prepareStatement(DELETE_QUERY);

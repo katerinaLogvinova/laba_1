@@ -8,7 +8,7 @@ public interface UserDAO {
 
     User create(User user) throws DatabaseException;
     void update(User user) throws DatabaseException;
-    void delete(Long id) throws DatabaseException;
+    void delete(User id) throws DatabaseException;
 
     User find(Long id) throws DatabaseException;
     Collection findAll() throws DatabaseException;
